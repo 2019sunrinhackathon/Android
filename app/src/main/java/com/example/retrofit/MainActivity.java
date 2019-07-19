@@ -115,6 +115,9 @@ public class MainActivity extends AppCompatActivity {
             // 아이템 내 각 위젯에 데이터 반영
 
             descTextView.setText(listViewItem.getTitle());
+        Intent intent=getIntent();
+            final String id=intent.getExtras().getString("id");
+
 
             descTextView.setOnClickListener(new View.OnClickListener() {
                 @Override

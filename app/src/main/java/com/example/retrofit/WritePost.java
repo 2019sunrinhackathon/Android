@@ -18,8 +18,7 @@ public class WritePost extends AppCompatActivity {
     private Button btn_push;
     private EditText et_title;
     private  EditText et_text;
-    Intent intent = new Intent();
-    final String id = intent.getStringExtra("id");
+       private String id;
 
     public String getEt_title() {
         return et_title.getText().toString();
@@ -32,7 +31,8 @@ public class WritePost extends AppCompatActivity {
         btn_push=findViewById(R.id.btn_push);
         et_title=findViewById(R.id.et_title);
         et_text=findViewById(R.id.et_text);
-
+        Intent intent =  getIntent();
+        id=intent.getStringExtra("id");
         final String title = et_title.getText().toString();
         final String text = et_text.getText().toString();
 
